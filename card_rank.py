@@ -16,3 +16,6 @@ class CardRank:
         'Q',
         'K'
     ]
+
+    def __init__(self, rank_symbol):
+        self.rank = rank_symbol
