@@ -1,4 +1,3 @@
-
 class CardRank:
     rank = None
     ranks = [

@@ -1,17 +1,20 @@
 from deck import Deck
 from row import Row
+from discard_stack import DiscardStack
 
 
 class Table:
     rows = []
     pile = None
-    discard_stack = [None] * 4
+    discard_stacks = []
 
     def __init__(self, deck):
         deck.shuffle()
         for i in range(7):
             self.rows.append(Row())
         self.deal(deck)
+        for i in range(4):
+            self.discard_stacks.append(DiscardStack())
 
     def deal(self, deck):
         for i in range(7):
@@ -22,6 +25,7 @@ class Table:
                     current_row = self.rows[j]
                     current_row.cards.append(deck.return_last_card())
         self.pile = deck
+
         print('Done dealing')
 
 

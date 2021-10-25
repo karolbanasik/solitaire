@@ -14,6 +14,3 @@ class CardSuit:
         self.symbol = self.name[0]
         suit_dict = self.suits[self.name]
         self.colour = suit_dict['colour']
-
-
-
