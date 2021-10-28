@@ -1,5 +1,6 @@
 from deck import Deck
 from row import Row
+from pile import Pile
 from discard_stack import DiscardStack
 
 
@@ -24,7 +25,7 @@ class Table:
                 for j in range(i + 1, 7):
                     current_row = self.rows[j]
                     current_row.cards.append(deck.return_last_card())
-        self.pile = deck
+        self.pile = Pile(deck)
 
         print('Done dealing')
 
