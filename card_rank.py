@@ -1,5 +1,4 @@
 class CardRank:
-    rank = None
     ranks = [
         'A',
         '2',
